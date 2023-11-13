@@ -88,8 +88,9 @@ TranquilMind is the perfect companion for those looking to embark on a journey o
 
 ## Issues worked on this sprint
 
-- List the issues you completed this sprint
-- [Add giphy that shows current build progress for Milestone 2. Note: We will be looking for progression of work between Milestone 2 and 3. Make sure your giphys are not duplicated and clearly show the change from Sprint 1 to 2.]
+- The meditation timer works
+- The profile page layout is set up (working on functionality)
+- <img src="tranquil1.png" width=600>
 
 <br>
 
