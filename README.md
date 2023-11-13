@@ -90,7 +90,7 @@ TranquilMind is the perfect companion for those looking to embark on a journey o
 
 - The meditation timer works
 - The profile page layout is set up (working on functionality)
-- <img src="tranquil1.png" width=600>
+- <img src="tranquil1.gif" width=600>
 
 <br>
 
