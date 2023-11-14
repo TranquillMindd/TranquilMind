@@ -29,14 +29,14 @@ TranquilMind is the perfect companion for those looking to embark on a journey o
 
 **Required Features**
 
-1. User must be able to use Meditation Timer.
-2. User must be able to use Breathing Exercise Timer.
-3. User must be able to see Welcome Page when launching the app.
+- [x] User must be able to use Meditation Timer.
+- [ ] User must be able to use Breathing Exercise Timer.
+- [ ] User must be able to see Welcome Page when launching the app.
 
 **Optional Features**
 
-1. Login page
-2. User Profile
+- [ ] Login page
+- [x] User Profile
 
 ### 2. Screen Archetypes
 
