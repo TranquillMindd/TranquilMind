@@ -13,5 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TranquilMind"
+rootProject.name = "Tranquil2"
 include(":app")
+ 

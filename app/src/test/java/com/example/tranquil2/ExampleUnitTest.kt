@@ -1,4 +1,4 @@
-package com.example.tranquilmind
+package com.example.tranquil2
 
 import org.junit.Test
 
