@@ -27,6 +27,13 @@
         <activity android:name=".ProfileActivity">
             <!-- ... other activity settings ... -->
         </activity>
+        <activity android:name=".MeditationActivity">
+            <!-- ... other activity settings ... -->
+        </activity>
+        <activity android:name=".BreatheActivity">
+            <!-- ... other activity settings ... -->
+        </activity>
+
     </application>
 
 </manifest>

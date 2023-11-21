@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.Tranquil2" parent="Base.Theme.Tranquil2" />
+    <style name="ThemeOverlay.MeditationApp.FullscreenContainer" parent=""/>
+    <style name="Theme.MeditationApp.Fullscreen" parent="Base.Theme.Tranquil2">
+        <item name="android:actionBarStyle">@style/Widget.Theme.MeditationApp.ActionBar.Fullscreen
+        </item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
 </resources>

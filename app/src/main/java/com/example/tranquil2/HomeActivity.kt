@@ -28,11 +28,15 @@ class HomeActivity : AppCompatActivity() {
                 R.id.menu_breathing -> {
                     // Handle breathing exercise menu item click
                     // Start a new activity or show a dialog for the breathing exercise
+                    val intent = Intent(this, BreatheActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.menu_mindfulness -> {
                     // Handle mindfulness exercise menu item click
                     // Start a new activity or show a dialog for the mindfulness exercise
+                    val intent = Intent(this, MeditationActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.menu_profile -> {
