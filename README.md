@@ -112,3 +112,4 @@ TranquilMind is the perfect companion for those looking to embark on a journey o
 ## App Demo Video
 
 - Embed the YouTube/Vimeo link of your Completed Demo Day prep video
+- - <img src="https://github.com/TranquillMindd/TranquilMind/blob/main/WalkThroughGif-Tranquil.gif" width=600>
