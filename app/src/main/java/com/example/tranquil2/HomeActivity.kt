@@ -39,6 +39,13 @@ class HomeActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+                R.id.menu_quote -> {
+                    // Handle quote card menu item click
+                    // Start a new activity for the quote card
+                    val intent = Intent(this, QuoteActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
                 R.id.menu_profile -> {
                     // Handle profile menu item click
                     // Start the profile activity

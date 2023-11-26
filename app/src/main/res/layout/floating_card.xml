@@ -1,0 +1,24 @@
+<!-- res/layout/floating_card.xml -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/floatingCard"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardElevation="8dp"
+    android:layout_margin="8dp"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/quoteText"
+        android:layout_width="351dp"
+        android:layout_height="201dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+</androidx.cardview.widget.CardView>
+
