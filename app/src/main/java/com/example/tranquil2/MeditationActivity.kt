@@ -5,11 +5,13 @@ import android.os.CountDownTimer
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
+import com.airbnb.lottie.LottieAnimationView
 
 class MeditationActivity : AppCompatActivity() {
     private lateinit var timerTextView: TextView
     private lateinit var startButton: MaterialButton
     private lateinit var countDownTimer: CountDownTimer
+    private lateinit var animationView: LottieAnimationView
 
     private var isTimerRunning = false
 
@@ -20,6 +22,7 @@ class MeditationActivity : AppCompatActivity() {
         // Initialize views
         timerTextView = findViewById(R.id.indicator)
         startButton = findViewById(R.id.start)
+        animationView = findViewById(R.id.animationView)
 
         // Set up the CountDownTimer (20 minutes in this example)
         val initialTime = 20 * 60 * 1000 // 20 minutes in milliseconds

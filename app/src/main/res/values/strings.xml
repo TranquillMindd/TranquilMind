@@ -34,6 +34,12 @@
     <string name="str_min_breathe">minutes done breathing exercise</string>
 
     <string name="str_motivate">You are doing great. Go ahead!!</string>
+    <string name="start">Start</string>
+    <string name="exercise_completed">Exercise Completed!</string>
+    <string name="stop_exercise_confirmation">Stop this breathing exercise</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string-array name="minutes">
         <item>20:00 minutes</item>
         <item>10:00 minutes</item>
