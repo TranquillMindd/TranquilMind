@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".JournalApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -24,7 +25,7 @@
         <activity android:name=".HomeActivity">
             <!-- ... other activity settings ... -->
         </activity>
-        <activity android:name=".ProfileActivity">
+        <activity android:name=".JournalEntriesActivity">
             <!-- ... other activity settings ... -->
         </activity>
         <activity android:name=".MeditationActivity">
@@ -33,6 +34,11 @@
         <activity android:name=".BreatheActivity">
             <!-- ... other activity settings ... -->
         </activity>
+
+        <activity android:name=".AddJournalActivity">
+            <!-- ... other activity settings ... -->
+        </activity>
+
 
     </application>
 

@@ -39,10 +39,10 @@ class HomeActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
-                R.id.menu_profile -> {
+                R.id.menu_journal -> {
                     // Handle profile menu item click
-                    // Start the profile activity
-                    val intent = Intent(this, ProfileActivity::class.java)
+                    // Start the journal activity
+                    val intent = Intent(this, JournalEntriesActivity::class.java)
                     startActivity(intent)
                     true
                 }
