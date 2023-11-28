@@ -16,4 +16,9 @@
         android:title="Journal"
         app:showAsAction="always" />
 
+    <item
+        android:id="@+id/menu_quote"
+        android:title="Inspirational Quotes"
+        app:showAsAction="always" />
+
 </menu>

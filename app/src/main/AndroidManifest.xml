@@ -25,20 +25,27 @@
         <activity android:name=".HomeActivity">
             <!-- ... other activity settings ... -->
         </activity>
+
         <activity android:name=".JournalEntriesActivity">
             <!-- ... other activity settings ... -->
         </activity>
-        <activity android:name=".MeditationActivity">
+
+        <activity android:name=".MeditationActivity"
+            android:parentActivityName=".HomeActivity">
             <!-- ... other activity settings ... -->
         </activity>
-        <activity android:name=".BreatheActivity">
+        <activity android:name=".BreatheActivity"
+            android:parentActivityName=".HomeActivity">
+            <!-- ... other activity settings ... -->
+        </activity>
+        <activity android:name=".QuoteActivity"
+            android:parentActivityName=".HomeActivity">
             <!-- ... other activity settings ... -->
         </activity>
 
         <activity android:name=".AddJournalActivity">
             <!-- ... other activity settings ... -->
         </activity>
-
 
     </application>
 

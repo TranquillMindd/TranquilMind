@@ -41,10 +41,17 @@ class JournalEntriesActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val addSessionBtn = findViewById<Button>(R.id.addButton)
+        val closeSessionBtn = findViewById<Button>(R.id.closeButton)
 
         addSessionBtn.setOnClickListener {
             // launch the detail activity
             val intent = Intent(this, AddJournalActivity::class.java)
+            this.startActivity(intent)
+        }
+
+        closeSessionBtn.setOnClickListener{
+            // launch the detail activity
+            val intent = Intent(this, HomeActivity::class.java)
             this.startActivity(intent)
         }
     }

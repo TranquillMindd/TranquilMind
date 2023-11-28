@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.airbnb.lottie.LottieAnimationView
 import com.example.tranquil2.databinding.ActivityBreatheBinding
 import java.util.*
 import java.util.concurrent.TimeUnit
@@ -19,6 +20,7 @@ class BreatheActivity : AppCompatActivity() {
     private var minutes = 3L
     private lateinit var tts: TextToSpeech
     private lateinit var binding: ActivityBreatheBinding
+    private lateinit var lottieAnimationView: LottieAnimationView
     private lateinit var viewModel: BreatheViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,42 +28,51 @@ class BreatheActivity : AppCompatActivity() {
         binding = ActivityBreatheBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        lottieAnimationView = findViewById(R.id.animationView)
+        lottieAnimationView.setAnimation(R.raw.animation)
+        lottieAnimationView.loop(true)
+
         viewModel = ViewModelProvider(this).get(BreatheViewModel::class.java)
 
         textIndicator = binding.indicator
         timer = createTimer()
-
-        tts = TextToSpeech(applicationContext, TextToSpeech.OnInitListener {
-            if (it == TextToSpeech.SUCCESS) {
-                tts.language = Locale.US
-                tts.setSpeechRate(0.8F)
-            }
-        })
 
         binding.start.setOnClickListener {
             toggle()
         }
 
         binding.close.setOnClickListener {
-            showDialog(this)
+            showDialog()
         }
     }
 
     private fun toggle() {
         if (isRunning) {
             stopExercise()
-            binding.start.text = "Start"
+            binding.start.text = getString(R.string.start)
         } else {
             textIndicator.text = "" // Clear the text
             timer.start()
+            lottieAnimationView.progress = 0f // Reset animation progress
+            lottieAnimationView.playAnimation() // Start Lottie animation
 
-            // Move the TextToSpeech initialization here if you want it to start with the exercise.
+            initializeTextToSpeech()
+        }
+    }
+
+    private fun initializeTextToSpeech() {
+        tts = TextToSpeech(applicationContext) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                tts.language = Locale.US
+                tts.setSpeechRate(0.8F)
+            }
         }
     }
 
     private fun createTimer(): CountDownTimer {
         return object : CountDownTimer(3 * 60000, 1000) {
             var sec = 0L
+
             override fun onTick(ms: Long) {
                 isRunning = true
                 minutes =
@@ -83,6 +94,7 @@ class BreatheActivity : AppCompatActivity() {
 
             override fun onFinish() {
                 stopExercise()
+                lottieAnimationView.pauseAnimation() // Pause Lottie animation
             }
         }
     }
@@ -90,21 +102,21 @@ class BreatheActivity : AppCompatActivity() {
     private fun stopExercise() {
         isRunning = false
         timer.cancel()
-        binding.indicator.text = "Exercise Completed"
+        binding.indicator.text = getString(R.string.exercise_completed)
     }
 
-    private fun showDialog(context: Context) {
-        val builder: AlertDialog.Builder = AlertDialog.Builder(context)
+    private fun showDialog() {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
 
-        builder.setMessage("Do you want to stop breathing exercise?")
+        builder.setMessage(getString(R.string.stop_exercise_confirmation))
             .setCancelable(true)
-            .setPositiveButton("Yes") { dialog, which ->
+            .setPositiveButton(getString(R.string.yes)) { dialog, which ->
                 finish()
             }
-            .setNegativeButton("Cancel") { dialog, which -> dialog.cancel() }
+            .setNegativeButton(getString(R.string.cancel)) { dialog, which -> dialog.cancel() }
 
         val alert = builder.create()
-        alert.setTitle("Are you sure")
+        alert.setTitle(getString(R.string.are_you_sure))
         alert.show()
     }
 
