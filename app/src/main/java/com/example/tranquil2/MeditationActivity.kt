@@ -1,15 +1,19 @@
 package com.example.tranquil2
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
+import com.airbnb.lottie.LottieAnimationView
 
 class MeditationActivity : AppCompatActivity() {
     private lateinit var timerTextView: TextView
     private lateinit var startButton: MaterialButton
+    private lateinit var closeButton: MaterialButton
     private lateinit var countDownTimer: CountDownTimer
+    private lateinit var animationView: LottieAnimationView
 
     private var isTimerRunning = false
 
@@ -20,6 +24,8 @@ class MeditationActivity : AppCompatActivity() {
         // Initialize views
         timerTextView = findViewById(R.id.indicator)
         startButton = findViewById(R.id.start)
+        animationView = findViewById(R.id.animationView)
+        closeButton = findViewById(R.id.close)
 
         // Set up the CountDownTimer (20 minutes in this example)
         val initialTime = 20 * 60 * 1000 // 20 minutes in milliseconds
@@ -48,6 +54,12 @@ class MeditationActivity : AppCompatActivity() {
                 isTimerRunning = true
                 startButton.text = "Pause"
             }
+        }
+
+        closeButton.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+            true
         }
     }
 

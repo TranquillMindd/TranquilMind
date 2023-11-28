@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/journalTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Journal"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Journal Entry Input -->
+    <EditText
+        android:id="@+id/JournalEntryEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/JournalNameEditText"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="top|start"
+        android:background="@android:color/white"
+        android:hint="Write your thoughts here..."
+        android:minLines="10"
+        android:padding="8dp" />
+
+    <!-- Journal Name Input -->
+    <EditText
+        android:id="@+id/JournalNameEditText"
+        android:layout_width="288dp"
+        android:layout_height="68dp"
+        android:layout_below="@id/journalTitleTextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/white"
+        android:hint="Enter Name..."
+        android:minLines="10"
+        android:padding="8dp" />
+
+    <!-- Journal date Input -->
+    <EditText
+        android:id="@+id/JournalDateEditText"
+        android:layout_width="208dp"
+        android:layout_height="63dp"
+        android:layout_below="@id/journalTitleTextView"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toEndOf="@id/journalTitleTextView"
+        android:background="@android:color/white"
+        android:hint="Enter Date..."
+        android:minLines="10"
+        android:padding="8dp" />
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/journalButtonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/JournalEntryEditText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="229dp"
+        android:text="Save" />
+
+</RelativeLayout>

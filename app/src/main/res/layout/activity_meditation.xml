@@ -7,119 +7,74 @@
     tools:context=".MeditationActivity"
     android:keepScreenOn="true">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-    </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom">
-
-        <ImageButton
-            android:id="@+id/sound"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_margin="16dp"
-            android:scaleType="centerInside"
-            app:layout_constraintBottom_toBottomOf="@+id/spinner"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/spinner"/>
-
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/speech"
-            app:layout_constraintStart_toEndOf="@+id/sound"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/speech"
-            android:layout_width="26dp"
-            android:layout_height="26dp"
-            android:layout_margin="16dp"
-            android:background="@color/white"
-            android:scaleType="centerInside"
-            app:layout_constraintBottom_toBottomOf="@+id/spinner"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/spinner" />
-        <!--            app:srcCompat="@drawable/mic" />-->
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageButton
-        android:id="@+id/close"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:scaleType="centerInside"
-        android:background="@color/white" />
-    <!--        app:srcCompat="@drawable/times"-->
-    <!--        android:layout_gravity="right|top"-->
-    <!--        android:layout_margin="24dp"/>-->
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:background="@color/black"></LinearLayout>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="260dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="19dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation1" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_gravity="center"
-        android:padding="24dp">
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_marginTop="90dp"> <!-- Adjust the margin as needed -->
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
             android:text="Meditate"
             android:textFontWeight="700"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            android:layout_marginBottom="8dp"/>
+            android:textSize="32sp" />
 
         <TextView
             android:id="@+id/indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/white"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:text="20:00"
-            android:textSize="32sp"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="32sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/start"
             android:layout_width="140dp"
             android:layout_height="56dp"
-            android:layout_weight="1"
-            android:textAllCaps="false"
-            app:cornerRadius="20dp"
             android:layout_margin="8dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_weight="1"
             android:backgroundTint="@color/design_default_color_primary"
-            android:text="Start" />
+            android:text="Start"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:cornerRadius="20dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/close"
+            android:layout_width="140dp"
+            android:layout_height="56dp"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:text="Close"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:cornerRadius="20dp" />
+
 
     </LinearLayout>
 
-    <!--    <com.airbnb.lottie.LottieAnimationView-->
-    <!--        android:id="@+id/animationView"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_gravity="bottom"-->
-    <!--        app:lottie_rawRes="@raw/flowers"-->
-    <!--        app:lottie_loop="true"-->
-    <!--        app:lottie_autoPlay="true"-->
-    <!--        android:layout_marginBottom="-30dp"-->
-    <!--        tools:ignore="MissingConstraints"/>-->
 </FrameLayout>
